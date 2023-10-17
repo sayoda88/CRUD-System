@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/project_style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container py-5">
+            
+            <div class="w-50 py-5 m-auto">
+               
+               <h2 class="text-center bg-info py-3 my-3 text-light"> Search For Your device </h2>
+                <input onkeyup="searchProducts(this.value)" placeholder="search here by productName ..."  class="form-control" type="text">
+                    <div id="searchResults" class=" w-100 p-3"></div>
+            </div>
+            
+            <label >ProductName :</label>
+            <input type="text" id="productNameInput"  class="my-2 form-control">
+            
+            <label >ProductPrice :</label>
+            <input type="text" id="productPriceInput"  class="my-2 form-control">
+
+            <label >ProductCategory :</label>
+            <input type="text" id="productCategoryInput"  class="my-2 form-control">
+
+            <label >ProductDesc :</label>
+            <textarea id="productDescInput"  class="my-2 form-control"> </textarea>
+
+            <button onclick="addProduct()" id="addBtn" class="btn btn-info">Add Product</button>
+        </div>
+
+        <div class="container mt-5">
+            <table class="table text-center">
+                <thead>
+                    <th>Index</th>
+                    <th>productName</th>
+                    <th>productPrice</th>
+                    <th>productCategory</th>
+                    <th>productDesc</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+
+        <script src="js/project.js"></script>
+    </body>
+</html>
